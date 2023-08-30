@@ -1,29 +1,29 @@
 package entities;
 
 public class RandomChoose {
-    private String pedra = "Pedra";
-    private String papel = "Papel";
-    private String tesoura = "Tesoura";
+    private String rock = "Rock";
+    private String paper = "Paper";
+    private String scissor = "Scissor";
 
     public RandomChoose() {
 
     }
 
-    public RandomChoose(String pedra, String papel, String tesoura) {
-        this.pedra = pedra;
-        this.papel = papel;
-        this.tesoura = tesoura;
+    public RandomChoose(String rock, String paper, String scissor) {
+        this.rock = rock;
+        this.paper = paper;
+        this.scissor = scissor;
     }
 
     public String AIchooseJokenpo() {
         int randomNumber = (int) (Math.random() * 3);
         switch (randomNumber) {
             case 0:
-                return pedra;
+                return rock;
             case 1:
-                return papel;
+                return paper;
             case 2:
-                return tesoura;
+                return scissor;
             default:
 
                 return "";

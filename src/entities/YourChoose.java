@@ -9,8 +9,8 @@ public class YourChoose extends RandomChoose {
         this.choose = choose;
     }
 
-    public YourChoose(String pedra, String papel, String tesoura, String choose) {
-        super(pedra, papel, tesoura);
+    public YourChoose(String rock, String paper, String scissor, String choose) {
+        super(rock, paper, scissor);
         this.choose = choose;
     }
 
@@ -18,14 +18,15 @@ public class YourChoose extends RandomChoose {
     String randomChoice = AIchoose.AIchooseJokenpo();
 
     public String getJokenpoResult(String choose) {
-        if (choose.equals("Pedra") && randomChoice.equals("Tesoura") ||
-                choose.equals("Tesoura") && randomChoice.equals("Papel") ||
-                choose.equals("Papel") && randomChoice.equals("Pedra")) {
-            return "Sua escolha foi: " + choose + ", " + "E a da AI foi: " + randomChoice + "." + " Então você venceu";
+        if (choose.equals("Rock") && randomChoice.equals("Scissor") ||
+                choose.equals("Scissor") && randomChoice.equals("Paper") ||
+                choose.equals("Paper") && randomChoice.equals("Rock")) {
+            return "Your choice were: " + choose + ", " + "and AI's choice was: " + randomChoice + "."
+                    + " Well, YOU WIN!";
         } else if (choose.equals(randomChoice)) {
-            return "Sua escolha foi: " + choose + ", " + "E a da AI foi: " + randomChoice + "." + " Empate!";
+            return "Your choice were: " + choose + ", " + "and AI's choice was: " + randomChoice + "." + " DRAW!";
         } else {
-            return "Sua escolha foi: " + choose + ", " + "E a da AI foi: " + randomChoice + "." + " Você perdeu!";
+            return "Your choice were: " + choose + ", " + "and AI's choice was " + randomChoice + "." + " YOU LOSE!";
         }
     }
 
